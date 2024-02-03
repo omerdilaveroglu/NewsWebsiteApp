@@ -1,0 +1,10 @@
+pip install django #django kur
+django-admin startproject game # proje oluşturuyor
+python manage.py runserver #çalıştırır
+python manage.py migrate # sql komutlarını çalıştırıyor
+python manage.py createsuperuser #süper kullanıcı oluşturuyor
+python manage.py  startapp oyunlar # oyunlar app i oluştur
+python manage.py makemigrations # sql komutlarını oluşturur
+python manage.py shell python moduna geçer
+pip freeze > requirements.txt
+pip install -r requirements.txt
