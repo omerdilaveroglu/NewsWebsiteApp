@@ -54,7 +54,9 @@
                 </div>
             </nav>
         </div>
+
         <div class="p-3 m-4 border-1 bd-example m-4 border-1">
+            <!--
             <div id="carouselExampleDark" class="carousel carousel-dark slide">
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -64,7 +66,7 @@
               <div class="carousel-inner">
 
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <a href="">
+                    <a href="/news_id/{{latest_news.0.id}}">
                       <img src="/media/{{latest_news.0.image}}" class="slider-image d-block w-100" alt="...">
                           <div class="carousel-caption d-none d-md-block">
                             <h5 style="font-size : 20px; color: white; font-weight: bold;">{{latest_news.0.header}}</h5>
@@ -73,7 +75,7 @@
 
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <a href="">
+                    <a href="/news_id/{{latest_news.1.id}}">
                       <img src="/media/{{latest_news.1.image}}" class="slider-image d-block w-100" alt="...">
                           <div class="carousel-caption d-none d-md-block">
                             <h5 style="font-size : 20px; color: white; font-weight: bold;">{{latest_news.1.header}}</h5>
@@ -81,7 +83,7 @@
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="">
+                    <a href="/news_id/{{latest_news.2.id}}">
                         <img src="/media/{{latest_news.2.image}}"  class="slider-image d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                             <h5 style="font-size : 20px; color: white; font-weight: bold;">{{latest_news.2.header}}</h5>
@@ -100,9 +102,21 @@
               </button>
             </div>
             <hr>
+            -->
 
 
-            asdadasd
+
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{single_news.header}}</h5>
+                <p class="card-text">{{single_news.description}}</p><p class="card-text"><small class="text-body-secondary">{{single_news.datetime}}</small></p>
+              </div>
+              <img src="/media/{{single_news.image}}" class="card-img-bottom" alt="...">
+            </div>
+
+
+
+
 
         </div>
 

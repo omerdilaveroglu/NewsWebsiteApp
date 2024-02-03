@@ -64,7 +64,7 @@
               <div class="carousel-inner">
 
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <a href="">
+                    <a href="/news_id/{{latest_news.0.id}}/">
                       <img src="/media/{{latest_news.0.image}}" class="slider-image d-block w-100" alt="...">
                           <div class="carousel-caption d-none d-md-block">
                             <h5 style="font-size : 20px; color: white; font-weight: bold;">{{latest_news.0.header}}</h5>
@@ -73,7 +73,7 @@
 
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <a href="">
+                    <a href="/news_id/{{latest_news.1.id}}/">
                       <img src="/media/{{latest_news.1.image}}" class="slider-image d-block w-100" alt="...">
                           <div class="carousel-caption d-none d-md-block">
                             <h5 style="font-size : 20px; color: white; font-weight: bold;">{{latest_news.1.header}}</h5>
@@ -81,7 +81,7 @@
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="">
+                    <a href="/news_id/{{latest_news.2.id}}/">
                         <img src="/media/{{latest_news.2.image}}"  class="slider-image d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                             <h5 style="font-size : 20px; color: white; font-weight: bold;">{{latest_news.2.header}}</h5>
@@ -105,12 +105,14 @@
             <div class="row col-12 mx-auto" >
                 {% for w in news_queryset %}
                     <div class="col-md-3 mt-4">
-                        <div class="card text-dark" style="height: 100%;">
-                            <img src="/media/{{ w.image }}" class="card-img" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ w.header }}</h5>
+                        <a href="/news_id/{{w.id}}">
+                            <div class="card text-dark" style="height: 100%;">
+                                <img src="/media/{{ w.image }}" class="card-img" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ w.header }}</h5>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 {% endfor %}
             </div>
