@@ -31,10 +31,12 @@ def category_page(request,category_id):
 def detail_page(request,news_id):
     news_queryset = News.objects.all()
     category= Category.objects.all()
+    latest_news = News.objects.order_by('-datetime')[:3]
     single_news = get_object_or_404(News,pk=news_id)
     content ={
         "category": category,
         "news_queryset": news_queryset,
-        "single_news":single_news
+        "single_news":single_news,
+        "latest_news":latest_news
     }
     return render(request,"single_news_page.html",content)
