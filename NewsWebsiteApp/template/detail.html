@@ -100,7 +100,7 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
-
+            <hr>
             <div class="row col-12 mx-auto">
                 {% for w in news_queryset %}
                     {% if w.category_id|stringformat:"s" == request.path|cut:"/"|default:"" %}
@@ -119,6 +119,24 @@
 
 
         </div>
+
+
+
+        <footer>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col text-center">
+                        <hr>
+                        <p>Tüm hakları saklıdır.</p>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <p>haberturk.com internet sitesinde yayınlanan yazı, haber, video ve fotoğrafların her türlü hakkı Haberturk Gazetecilik A.Ş.’ye aittir. İzin alınmadan, kaynak gösterilerek dahi iktibas edilemez.
+                            Copyright © 2021 - Tüm hakları saklıdır. Habertürk Gazetecilik A.Ş.</p>
+                </div>
+            </div>
+        </footer>
+
 
 
     </body>
