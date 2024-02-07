@@ -28,84 +28,102 @@
     </style>
 </head>
 
-    <body>
-        <div class="p-3 m-4 border-1 bd-example m-4 border-1">
-            <div style="text-align: center;">
-                <a class="navbar-brand" href="/">
-                    <img src="/media/images/Haberturk.com_logo.jpg" style="width:120px;" alt="">
-                </a>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-0.4">
+
             </div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+            <div class="col-md-11.2">
 
-                    <div class="collapse navbar-collapse" id="navbarScroll">
-                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                            {% for i in category %}
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/{{i.id}}">{{i.name}}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-
+                <div class="p-3 m-4 border-1 bd-example m-4 border-1">
+                    <div style="text-align: center;">
+                        <a class="navbar-brand" href="/">
+                            <img src="/media/images/Haberturk.com_logo.jpg" style="width:120px;" alt="">
+                        </a>
                     </div>
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarScroll">
+                                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                                    style="--bs-scroll-height: 100px;">
+                                    {% for i in category %}
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/{{i.id}}">{{i.name}}</a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+
+                            </div>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
-        </div>
-        <div class="p-3 m-4 border-1 bd-example m-4 border-1">
-            <div id="carouselExampleDark" class="carousel carousel-dark slide">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
+                <div class="p-3 m-4 border-1 bd-example m-4 border-1">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
 
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <a href="/news_id/{{latest_news.0.id}}/">
-                      <img src="/media/{{latest_news.0.image}}" class="slider-image d-block w-100" alt="...">
-                          <div class="carousel-caption d-none d-md-block">
-                              <h5 style="font-size : 20px; color: white; font-weight: bold;">{{latest_news.0.header}}</h5>
-                          </div>
-                    </a>
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <a href="/news_id/{{latest_news.0.id}}/">
+                                    <img src="/media/{{latest_news.0.image}}" class="slider-image d-block w-100"
+                                        alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 style="font-size : 20px; color: white; font-weight: bold;">
+                                            {{latest_news.0.header}}</h5>
+                                    </div>
+                                </a>
 
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <a href="/news_id/{{latest_news.1.id}}/">
-                      <img src="/media/{{latest_news.1.image}}" class="slider-image d-block w-100" alt="...">
-                          <div class="carousel-caption d-none d-md-block">
-                            <h5 style="font-size : 20px; color: white; font-weight: bold;">{{latest_news.1.header}}</h5>
-                          </div>
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="/news_id/{{latest_news.2.id}}/">
-                        <img src="/media/{{latest_news.2.image}}"  class="slider-image d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                            <h5 style="font-size : 20px; color: white; font-weight: bold;">{{latest_news.2.header}}</h5>
-                      </div>
-                    </a>
-                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <a href="/news_id/{{latest_news.1.id}}/">
+                                    <img src="/media/{{latest_news.1.image}}" class="slider-image d-block w-100"
+                                        alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 style="font-size : 20px; color: white; font-weight: bold;">
+                                            {{latest_news.1.header}}</h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="/news_id/{{latest_news.2.id}}/">
+                                    <img src="/media/{{latest_news.2.image}}" class="slider-image d-block w-100"
+                                        alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 style="font-size : 20px; color: white; font-weight: bold;">
+                                            {{latest_news.2.header}}</h5>
+                                    </div>
+                                </a>
+                            </div>
 
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-            <hr>
-
-
-            <div class="row col-12 mx-auto">
-                {% for w in news_queryset %}
-                    {% if w.category_id|stringformat:"s" == request.path|cut:"/"|default:"" %}
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <hr>
+                    <div class="row col-12 mx-auto">
+                        {% for w in news_queryset %}
+                        {% if w.category_id|stringformat:"s" == request.path|cut:"/"|default:"" %}
                         <div class="col-md-3 mt-4">
                             <a href="/news_id/{{w.id}}">
                                 <div class="card text-dark" style="height: 100%;">
@@ -117,32 +135,34 @@
                             </a>
 
                         </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-
-
-
-        </div>
-
-
-
-        <footer>
-            <div class="container mt-3">
-                <div class="row">
-                    <div class="col text-center">
-                        <hr>
-                        <p>Tüm hakları saklıdır.</p>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
-                <div class="col text-center">
-                    <p>haberturk.com internet sitesinde yayınlanan yazı, haber, video ve fotoğrafların her türlü hakkı Haberturk Gazetecilik A.Ş.’ye aittir. İzin alınmadan, kaynak gösterilerek dahi iktibas edilemez.
-                            Copyright © 2021 - Tüm hakları saklıdır. Habertürk Gazetecilik A.Ş.</p>
-                </div>
+                <footer>
+                    <div class="container mt-3">
+                        <div class="row">
+                            <div class="col text-center">
+                                <hr>
+                                <p>Tüm hakları saklıdır.</p>
+                            </div>
+                        </div>
+                        <div class="col text-center">
+                            <p>haberturk.com internet sitesinde yayınlanan yazı, haber, video ve fotoğrafların her türlü
+                                hakkı Haberturk Gazetecilik A.Ş.’ye aittir. İzin alınmadan, kaynak gösterilerek dahi
+                                iktibas edilemez.
+                                Copyright © 2021 - Tüm hakları saklıdır. Habertürk Gazetecilik A.Ş.</p>
+                        </div>
+                    </div>
+                </footer>
+
             </div>
-        </footer>
+            <div class="col-md-0.4">
 
+            </div>
+        </div>
+    </div>
 
+</body>
 
-    </body>
 </html>
