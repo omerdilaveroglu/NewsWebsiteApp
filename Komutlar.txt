@@ -8,3 +8,5 @@ python manage.py makemigrations # sql komutlarını oluşturur
 python manage.py shell python moduna geçer
 pip freeze > requirements.txt
 pip install -r requirements.txt
+
+set PATH=C:\Users\omerd\Desktop\Projects\Python\Django\examples\.venv\Scripts;%PATH%
